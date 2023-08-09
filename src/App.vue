@@ -1,32 +1,40 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  data: () => ({
+    //
+  }),
+};
+</script>
+<style scoped>
+@font-face {
+  font-family: "fira-bold";
+  src: local("FiraSans-Bold"),
+   url(assets/fonts/FiraSans-Bold.ttf) format("truetype");
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
+@font-face {
+  font-family: "fira-regular";
+  src: local("FiraSans-Regular"),
+   url(assets/fonts/FiraSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: local("Roboto-Regular"),
+   url(assets/fonts/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: local("Roboto-Medium"),
+   url(assets/fonts/Roboto-Medium.ttf) format("truetype");
 }
 </style>
